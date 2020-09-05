@@ -69,3 +69,6 @@ class Leaseweb(models.Model):
     contract_pricePerFrequency = models.FloatField()
     contract_currency = models.CharField(max_length=3)
     networkInterfaces = models.TextField()
+
+    def __str__(self):
+        return str(self.assetId)
