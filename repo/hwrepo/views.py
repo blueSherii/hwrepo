@@ -10,10 +10,5 @@ from django.shortcuts import render
 # Create your views here.
 
 def main(request):
-    items = Leaseweb.objects.all()
-    assetsIds = []
-    for server in items:
-        assetsIds.append(str(server.assetId))
-
-    html = '<br>'.join(assetsIds)
-    return HttpResponse(html)
+    servers = Leaseweb.objects.all()
+    return render(request, 'index.html', {'servers': servers})
