@@ -40,14 +40,14 @@
 						</thead>
 						<tbody>
 						{% for server in servers %}
-								<tr>
+							<tr>
 									<td class="column1">{{server.assetId}}</td>
 									<td class="column2">{{server.location_site}}</td>
 									<td class="column3">{{server.serialNumber}}</td>
 									<td class="column4">{{server.contract_startsAt}}</td>
-									<td class="column5">{{server.contract_pricePerFrequency}}</td>
+									<td class="column5">€ {{server.contract_pricePerFrequency}}</td>
 									<td class="column6">{{server.contract_billingFrequency}}</td>
-								</tr>
+						</tr>
 						{% endfor %}
 						</tbody>
 					</table>
