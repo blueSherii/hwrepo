@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h6_aqqxlfz=l2hlh7lj(%*nai3p-vh@9@-gtrhpb)z!mv0@@ms'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['hetzner','repo','lab.sherif.club']
 

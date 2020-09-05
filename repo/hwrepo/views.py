@@ -14,10 +14,13 @@ def main(request):
 
 
 def search(request):
-    search_val = request.POST['search']
+    search_val = request.GET['search']
+    print "Search term: " + search_val
     servers = Leaseweb.objects.all()
     filtered = []
     for server in servers:
-        if str(server.assetId) == search_val or server.serialNumber == search_val:
+        if search_val in str(server.assetId) or search_val in server.serialNumber:
             filtered.append(server)
+
+    print len(filtered)
     return render(request, 'dev/search.dev.html', {'servers': filtered})
