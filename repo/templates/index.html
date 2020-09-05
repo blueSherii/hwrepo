@@ -33,30 +33,7 @@
 			<div class="wrap-table100">
 				<div class="table100">
 
-					<table>
-						<thead>
-							<tr class="table100-head">
-								<th class="column1">Asset Id</th>
-								<th class="column2">Location Site</th>
-								<th class="column3">Serial Number</th>
-								<th class="column4">Chassis</th>
-								<th class="column5">CPU</th>
-								<th class="column6">RAM</th>
-							</tr>
-						</thead>
-						<tbody>
-						{% for server in servers %}
-							<tr>
-									<td class="column1">{{server.assetId}}</td>
-									<td class="column2">{{server.location_site}}</td>
-									<td class="column3">{{server.serialNumber}}</td>
-									<td class="column4">{{server.specs_chassis}}</td>
-									<td class="column5">{{server.specs_cpu_type}} X {{server.specs_cpu_quantity}}</td>
-									<td class="column6">{{server.specs_ram_size}} {{server.specs_ram_unit}}</td>
-						</tr>
-						{% endfor %}
-						</tbody>
-					</table>
+				
 				</div>
 			</div>
 		</div>
