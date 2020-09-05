@@ -1,3 +1,4 @@
+{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@
 
 		<div class="container-table100">
 			<div class="container-search">
-					<form action="/" method="post">
+					<form action="/search" method="get">
 						<input type="search" name="search" />
 					</form>
 			</div>
