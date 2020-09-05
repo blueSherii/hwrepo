@@ -122,6 +122,11 @@ iframe {
   padding: 33px 30px;
 }
 
+.container-search {
+  width: 100%;
+  align: center;
+}
+
 .wrap-table100 {
   width: 1170px;
 }
