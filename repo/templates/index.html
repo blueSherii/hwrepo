@@ -21,18 +21,38 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+	<script>
+function getData(SearchVal) {
+    // Creating the XMLHttpRequest object
+    var request = new XMLHttpRequest();
+
+    // Instantiating the request object
+    request.open("GET", "/search/?search="+SearchVal);
+
+    // Defining event listener for readystatechange event
+    request.onreadystatechange = function() {
+        // Check if the request is compete and was successful
+        if(this.readyState === 4 && this.status === 200) {
+            // Inserting the response from server into an HTML element
+            document.getElementById("result").innerHTML = this.responseText;
+        }
+    };
+
+    // Sending the request to the server
+    request.send();
+}
+</script>
 </head>
+
 <body>
 	<div class="limiter">
 
 		<div class="container-table100">
 			<div class="container-search">
-					<form action="/search/" method="get">
-						<input type="search" name="search" />
-					</form>
+						<input id="SearchBox" type="search" name="search" onkeyup="getData(this.value)" />
 			</div>
 			<div class="wrap-table100">
-				<div class="table100">
+				<div id="result" class="table100">
 
 				
 				</div>
