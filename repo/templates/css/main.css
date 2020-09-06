@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 
@@ -14,8 +14,8 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -142,7 +142,7 @@ input {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
+  width: 1170px;
   margin: 0 auto;
   position: relative;
   padding: 5px 5px 5px 25px;
